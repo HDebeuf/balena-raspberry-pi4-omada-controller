@@ -1,0 +1,5 @@
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:JAVA_JDK_DIR/bin:JAVA_JDK_DIR/db/bin:JAVA_JDK_DIR/jre/bin"
+J2SDKDIR="JAVA_JDK_DIR"
+J2REDIR="JAVA_JDK_DIR/jre*
+JAVA_HOME="JAVA_JDK_DIR"
+DERBY_HOME="JAVA_JDK_DIR/db"

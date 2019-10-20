@@ -1,0 +1,21 @@
+version: '2.1'
+
+volumes:
+    omada-data:
+    omada-work:
+    omada-logs:
+
+services:
+    omada:
+        build: ./omada
+        container_name: omada-controller
+        privileged: true
+        network_mode: host
+        volumes:
+            - omada-data:/opt/tplink/OmadaController/data
+            - omada-work:/opt/tplink/OmadaController/work
+            - omada-logs:/opt/tplink/OmadaController/logs
+        ports:
+            - 8088:8088
+            - 8043:8043
+        restart: unless-stopped

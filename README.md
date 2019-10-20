@@ -55,7 +55,7 @@ You'll have to accept the license aggreements and create a personnal account.
 Rename the downloaded JDK to `java_jdk.tar.gz` and place it in the project folder
 
 ### 4. Define your email variable
-In order to download the `omada-controller_3.2.1-1_all.deb` install file, your email is required in order to access anonymously ftp.rent-a-guru.de
+In order to download the `omada-controller_3.2.1-1_all.deb` install file, your email is required in order to access anonymously 'ftp.rent-a-guru.de'
 
 ```
 ENV OMADA_EMAIL_ADDRESS your@email.com
@@ -76,16 +76,11 @@ balena push ProjectName --emulated
 Configure your Omada Controller following the [setup tutorial](https://www.tp-link.com/us/support/download/eap-controller/).
 
 ## Alternative
-In order to reduce build time, you may upload the Java JDK on a personnal download link.
+In order to reduce build time, you may upload the Java JDK on a personnal download link and let the container process it by himself during build.
 
-Simply add the wget command that pulls your JDK .tar.gz into the container to the Dockerfile. So replace
+Simply add your download link to the `Dockerfile_wget_java_jdk` file and rename it to `Dockerfile`.
 ```
-RUN  tar -xvzf /java_jdk.tar.gz -C /usr/lib/jvm &&\
-```
-with
-```
-RUN wget --no-check-certificate -O java_jdk.tar.gz "JAVA_JDK_DOWNLOAD_URL" &&\
-  tar -xvzf /java_jdk.tar.gz -C /usr/lib/jvm &&\
+ENV OMADA_JAVA_JDK_DOWNLOAD_URL https://add-your-link-here.com
 ```
 
 You may use a OneDrive link for example -> https://unix.stackexchange.com/questions/223734/how-to-download-files-and-folders-from-onedrive-using-wget
