@@ -36,9 +36,11 @@ omada:
 ```
 
 ## Components
-  * Omada Controller 3.2.1
-  * Java ORACLE 1.8.0 JDK
-  * MongoDB v2.6.10
+Component        | Version
+---------------- | -------------
+Omada Controller | v4.2.4
+Java ORACLE JDK  | v1.8.0
+MongoDB          | v2.6.10
 
 ## Usage
 
@@ -54,14 +56,7 @@ You'll have to accept the license aggreements and create a personnal account.
 ### 3. Add the Java Oracle JDK in the project
 Rename the downloaded JDK to `java_jdk.tar.gz` and place it in the project folder
 
-### 4. Define your email variable
-In order to download the `omada-controller_3.2.1-1_all.deb` install file, your email is required in order to access anonymously 'ftp.rent-a-guru.de'
-
-```
-ENV OMADA_EMAIL_ADDRESS your@email.com
-```
-
-### 5. Upload your image to Balena
+### 4. Upload your image to Balena
 Follow the [Balena documentation](https://www.balena.io/docs/learn/deploy/deployment/) to push your image to your Raspberry Pi 4.
 !! It takes approximatelly 5 minutes to upload your source package to balena cloud due to the heavy Java JDK .tar.gz file
 
@@ -72,7 +67,7 @@ balena push ProjectName --emulated
 
 !! Omada may throw a Java error on first run due to the volume creation. Simply retry the push
 
-### 6. Configure Omada controller
+### 5. Configure Omada controller
 Configure your Omada Controller following the [setup tutorial](https://www.tp-link.com/us/support/download/eap-controller/).
 
 ## Alternative
@@ -84,3 +79,9 @@ ENV OMADA_JAVA_JDK_DOWNLOAD_URL https://add-your-link-here.com
 ```
 
 You may use a OneDrive link for example -> https://unix.stackexchange.com/questions/223734/how-to-download-files-and-folders-from-onedrive-using-wget
+1. Right-click on the file you are interested in download (from web interface), and choose Embed.
+2. Press "Generate HTML code to embed this file".
+3. Copy the part contained in the "" of src is your link. This will look like <https://onedrive.live.com/embed?cid=6EBB03E38A53ED3E& resid=6EBB03E38A53ED3E%21116&authkey=AC4lDqtLG8LqfiA>.
+4. Replace embed with download. This will look like https://onedrive.live.com/download?cid=6EBB03E38A53ED3E&resid=6EBB03E38A53ED3E%21116&authkey=AC4lDqtLG8LqfiA.
+5. Add &download=1 to the link. This will look like https://onedrive.live.com/download?cid=6EBB03E38A53ED3E&resid=6EBB03E38A53ED3E%21116&authkey=AC4lDqtLG8LqfiA&download=1.
+
