@@ -1,7 +1,7 @@
 # balena-raspberry-pi4-omada-controller
 An Omada Controller Docker container built for an ARM64v8 (aarch64) Raspberry Pi4 using Balena
 
-This image makes use of omada-controller_3.2.1-1_all.deb made by the TP-link community available with the following link:
+This image makes use of omada-sdn-controller-4.2.4_1_all.deb made by the TP-link community available with the following link:
 https://community.tp-link.com/en/business/forum/topic/162210
 
 ***
